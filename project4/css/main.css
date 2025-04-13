@@ -1,0 +1,662 @@
+/* Root styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Playfair: "Playfair", serif;
+    --Quicksand: "Quicksand", sans-serif;
+    --Roboto: "Roboto", sans-serif;
+    --dark: #3c393d;
+    --shadow: #6f6f6f;
+    --extraDark: #2b2b2b;
+}
+
+.footerSectionGradient {
+    background: linear-gradient(to bottom, var(--extraDark), #979797);
+    background-size: 180% 180%;
+    animation: customHome-gradient 5s ease infinite;
+}
+
+@keyframes customHome-gradient {
+    0% {
+      background-position: 0% 100%;
+    }
+    50% {
+      background-position: 50% 50%;
+    }
+    100% {
+      background-position: 0% 100%;
+    }
+}
+
+/* Header section styles */
+.headerSection {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url("../images/banner-bg.jpg")
+                center/cover
+                no-repeat
+                fixed;
+}
+
+.navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    position: sticky;
+    padding: 1.2rem;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navigationMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigationMenu .navigationMenuLogo a {
+    color: #fff;
+    display: block;
+    font-size: 2rem;
+    position: relative;
+    padding: 0rem 1rem;
+    margin: 0rem 0.2rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-family: var(--Playfair);
+}
+
+.navigationMenu .navigationMenuLogo a i {
+    top: 4px;
+    right: 4px;
+    font-size: 0.8rem;
+    position: absolute;
+} 
+
+.navigationMenu .navigationMenuNavbar {
+    padding: 0.8rem 0rem;
+}
+
+.navigationMenu .navigationMenuNavbar .navbarItems {
+    list-style: none;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: var(--Roboto);
+}
+
+.navigationMenuNavbar .navbarItems .navbarItem {
+    display: inline-block;
+}
+
+.navigationMenuNavbar .navbarItems .navbarItem a {
+    color: #fff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    display: inline-block;
+    text-decoration: none;
+    transition: opacity 0.5s ease;
+}
+
+.navbarItems .navbarItem a:hover {
+    opacity: 0.7;
+}
+
+.headerSection .banner {
+    color: #fff;
+    display: flex;
+    padding-top: 15%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .bannerInfo .bannerTitle {
+    font-size: 5rem;
+    line-height: 1.2;
+    font-family: var(--Playfair);
+}
+
+.bannerInfo .bannerTitle span {
+    color: var(--extraDark);
+    font-family: var(--Playfair);
+}
+
+.bannerInfo .bannerText {
+    font-weight: 300;
+    font-size: 1.2rem;
+    word-spacing: 2px;
+    padding: 1rem 0rem 2rem;
+    font-family: var(--Roboto);
+    text-transform: capitalize;
+}
+
+.banner .bannerForm form {
+    width: 95%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    margin-top: 0.8rem;
+    border-radius: 2rem;
+    padding: 0.6rem 1rem;
+    justify-content: space-between;
+    transition: 0.5s ease;
+}
+
+.banner .bannerForm form:hover {
+    box-shadow: 0px 5px 10px 5px var(--shadow);
+}
+
+.bannerForm form .formInputSearch {
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    font-family: var(--Roboto);
+    padding: 0.6rem 0rem 0.6rem 0.6rem;
+}
+
+.bannerForm form .formInputSearch::placeholder {
+    text-transform: capitalize;
+}
+
+.bannerForm form .formInputSearch[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.bannerForm form .formBtnSearch {
+    width: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.bannerForm form .formBtnSearch i {
+    font-size: 1.2rem;
+    color: var(--dark);
+}
+
+/* Design section styles */
+.designSection {
+    padding: 4.5rem 0rem;
+}
+
+.designSection .designSectionContent .designSectionCards {
+    gap: 2rem;
+    display: grid;
+    margin: 2rem 0rem;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.designSectionContent .designSectionCards .designSectionCard {
+    margin: 0rem;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: column;
+}
+
+.designSectionCards .designSectionCard .designSectionCardImage {
+    overflow: hidden;
+    position: relative;
+}
+
+.designSectionCardImage::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: " ";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.designSectionCardImage img {
+    transition: all 0.5s ease;
+}
+
+.designSectionCard:hover .designSectionCardImage img {
+    transform: scale(1.2);
+}
+
+.designSectionCardImage span:first-of-type {
+    z-index: 1;
+    top: 0.5rem;
+    left: 0.5rem;
+    color: #fff;
+    content: " ";
+    position: absolute;
+    padding: 0.25rem 1rem;
+    background: var(--dark);
+}
+
+.designSectionCardImage span:last-of-type {
+    z-index: 1;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: absolute;
+    text-transform: capitalize;
+}
+
+.designSectionCard .designSectionCardInfo {
+    width: 85%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.designSectionCard .designSectionCardInfo a {
+    color: var(--dark);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: var(--Playfair);
+}
+
+/* Blog section styles */
+.blogSection {
+    padding: 4.5rem 0rem;
+    background: #f9f9f9;
+}
+
+.blogSection .blogSectionContent .blogSectionCards {
+    gap: 2rem;
+    display: grid;
+    margin: 2rem 0rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.blogSectionCards .blogSectionCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease;
+}
+
+.blogSectionCard:hover {
+    box-shadow: 0px 0px 20px 5px #d3d3d3;
+}
+
+.blogSectionCards .blogSectionCard .blogSectionCardImage {
+    position: relative;
+}
+
+.blogSectionCardImage span:first-of-type {
+    z-index: 1;
+    color: #fff;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    position: absolute;
+    padding: 0.3rem 0.6rem;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.blogSectionCard .blogSectionCardInfo {
+    padding: 0rem 1rem;
+    margin: 2.2rem 0rem;
+}
+
+.blogSectionCard .blogSectionCardInfo span {
+    display: block;
+    font-weight: lighter;
+    padding-bottom: 0.5rem;
+}
+
+.blogSectionCardInfo .blogCardTitle {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 0.6rem 0rem;
+    font-family: var(--Playfair);
+}
+
+.blogSectionCardInfo .blogCardInfo {
+    opacity: 0.9;
+    font-weight: 300;
+    font-size: 1.1rem;
+    padding-bottom: 1.8rem;
+}
+
+.blogSectionCardInfo .blogCardBtn {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    background: var(--dark);
+    transition: all 0.3s ease;
+    font-family: var(--Roboto);
+}
+
+.blogSectionCardInfo .blogCardBtn:hover {
+    background: var(--extraDark);
+    box-shadow: 5px 5px 5px #6f6f6f;
+}
+
+/* About section styles */
+.aboutSection {
+    padding: 4.5rem 0rem;
+}
+
+.aboutSection .aboutSectionContent {
+    margin: 2rem 0rem;
+}
+
+.aboutSection .aboutSectionContent .aboutSectionContentItems {
+    display: grid;
+    column-gap: 4rem;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.aboutSectionContentItems .aboutSectionInfo .aboutTitle {
+    margin: 2rem 0rem;
+}
+
+.aboutSectionInfo .aboutTitle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aboutSectionInfo .aboutTitle .authorName {
+    font-size: 2.5rem;
+    color: var(--extraDark);
+    font-family: var(--Playfair);
+}
+
+.aboutSectionInfo .aboutTitle .authorProf {
+    opacity: 0.5;
+    font-size: 1.5rem;
+    color: var(--dark);
+    text-transform: capitalize;
+}
+
+.aboutSectionInfo .aboutTitle .authorProf a {
+    text-decoration: none;
+    color: var(--extraDark);
+}
+
+.aboutTitle .authorProf a:hover {
+    text-decoration: underline;
+}
+
+.aboutSectionInfo .aboutAuthor {
+    opacity: 0.8;
+    font-size: 1.2rem;
+    text-indent: 2rem;
+    text-align: justify;
+    padding: 0.6rem 0rem;
+}
+
+/* Reviews section styles */
+.reviewsSection {
+    overflow-x: hidden;
+    padding: 4.5rem 0rem;
+}
+
+.reviewsSection .reviewsTrack {
+    display: flex;
+    transition: transform 0.5s ease;
+} 
+
+.reviewsSection .reviewsTrack .reviewsSectionContent {
+    overflow: hidden;
+    margin: 2rem 0rem;
+    position: relative;
+}
+
+.reviewsSectionContent .reviewsSectionContentItems {
+    display: flex;
+    padding: 2rem;
+    flex: 0 0 100%;
+    justify-content: center;
+}
+
+.reviewsSectionContentItems .reviewContentImage {
+    width: 35%;
+    display: flex;
+    margin-right: 3rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reviewContentImage .reviewImageTitle {
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+    font-family: var(--Playfair);
+}
+
+.reviewContentImage .reviewImageProf {
+    font-size: 1.2rem;
+    color: var(--dark);
+}
+
+.reviewContentImage .reviewImageProf .reviewProfInfo p {
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.reviewContentImage .reviewImageProf .reviewProfInfo a {
+    color: var(--dark);
+    text-decoration: none;
+} 
+
+.reviewContentImage .reviewImageProf .reviewProfInfo a:hover {
+    text-decoration: underline;
+}
+
+.reviewContentImage .reviewImageProf .reviewProfLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviewContentImage .reviewImageProf .reviewProfLogo a {
+    margin: 0rem 1rem;
+}
+
+.reviewContentImage .reviewImageProf .reviewProfLogo img {
+    width: 70px;
+}
+
+.reviewsSectionContentItems .reviewContentImage img {
+    width: 300px;
+}
+
+.reviewsSectionContentItems .reviewContentInfo {
+    width: 40%;
+}
+
+.reviewContentInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.reviewContentInfo .reviewText {
+    opacity: 0.8;
+    font-size: 1rem;
+    margin: 2rem 0rem;
+    text-indent: 2rem;
+    text-align: justify;
+    line-height: 1.8rem;
+}
+
+.reviewContentInfo .reviewValuation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reviewContentInfo .reviewValuation i {
+    opacity: 0.5;
+    color: var(--dark);
+}
+
+.reviewContentInfo .reviewValuation i.active {
+    color: #fffb00;
+}
+
+.reviewContentInfo .reviewValuation span {
+    font-size: 1.3rem;
+    font-style: italic;
+    letter-spacing: 0.1rem;
+    font-family: var(--Playfair);
+} 
+
+/* Footer section styles */
+.footerSection {
+    color: #fff;
+    padding: 4.5rem 0rem;
+}
+
+.footerSection .footerSectionNavigationMenu {
+    display: flex;
+    align-items: center;
+    padding: 0rem 1.2rem;
+    justify-content: space-between;
+}
+
+.footerSectionNavigationMenu .footerSectionLogo a {
+    color: #fff;
+    font-size: 2rem;
+    padding: 0rem 1rem;
+    position: relative;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    font-family: var(--Playfair);
+}
+
+.footerSectionNavigationMenu .footerSectionLogo a i {
+    top: 4px;
+    right: 4px;
+    font-size: 0.8rem;
+    position: absolute;
+}
+
+.footerSectionNavigationMenu {
+    margin-bottom: 4.5rem;
+}
+
+.footerSectionNavigationMenu .footerSectionNavbar {
+    display: grid;
+    column-gap: 5.6rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footerSectionNavbarItems {
+    list-style: none;
+}
+
+.footerSectionNavbarItem {
+    padding: 0.5rem;
+}
+
+.footerSectionNavbarItem a {
+    color: #9e9e9e;
+    font-size: 1.1rem;
+    padding: 0rem 0.5rem;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.footerSectionNavbarItem a:hover {
+    color: #e1e1e1;
+    text-decoration: underline;
+}
+
+.footerSection p {
+    display: flex;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    font-family: var(--Playfair);
+}
+
+.footerSection .socialNetworks {
+    display: flex;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+.footerSection .socialNetworks .socialNetwork {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    display: flex;
+    font-size: 20px;
+    border-radius: 50%;
+    align-items: center;
+    margin: 0rem 0.5rem;
+    text-decoration: none;
+    justify-content: center;
+    border: 2px solid #fff;
+    transition: all 1s ease;
+}
+
+.socialNetworks .socialNetwork:hover {
+    color: var(--dark);
+    background: #fff;
+    transform: rotate(360deg);
+}
+
+.footerSection .footerText {
+    display: flex;
+    justify-content: center;
+}
+
+.footerText p {
+    display: flex;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    justify-content: center;
+    font-family: var(--Playfair);
+}
+
+.footerSection p .art {
+    font-size: 1.2rem;
+    padding: 0rem 15px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-right: none;
+    transition: all 0.3s ease;
+    font-family: var(--Playfair);
+}
+
+.footerSection p .design {
+    margin-right: 2px;
+    padding: 0px 2px;
+    font-size: 1.2rem;
+    background: #fff;
+    color: var(--dark);
+    letter-spacing: 2px;
+    align-self: stretch;
+    transition: all 0.3s ease;
+    font-family: var(--Playfair);
+}
+
+.footerText p:hover .art {
+    background: #fff;
+    color: var(--dark);
+}
+
+.footerText p:hover .design {
+    color: #fff;
+    border: 1px solid #fff;
+    border-left: none;
+    background: transparent;
+}

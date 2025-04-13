@@ -1,0 +1,70 @@
+/* Global styles */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--Quicksand);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.4;
+    color: var(--dark);
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0px auto;
+    padding: 0rem 1.2rem;
+}
+
+.sectionInfo {
+    display: flex;
+    padding: 1rem 0rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sectionInfo .sectionTitle {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-family: var(--Playfair);
+}
+
+.sectionInfo .sectionSubtitle {
+    padding: 0.6rem 0rem;
+    text-transform: uppercase;
+}
+
+#scrollToTopBtn {
+    z-index: 20;
+    width: 50px;
+    height: 50px;
+    bottom: 2rem;
+    border: none;
+    right: 2.2rem;
+    color: #fff;
+    display: none;
+    outline: none;
+    position: fixed;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    background: #555;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background: var(--dark);
+    box-shadow: 0px 0px 3px 10px rgba(176, 176, 176, 0.463);
+}
