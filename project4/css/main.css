@@ -18,13 +18,13 @@
 
 @keyframes customHome-gradient {
     0% {
-      background-position: 0% 100%;
+        background-position: 0% 100%;
     }
     50% {
-      background-position: 50% 50%;
+        background-position: 50% 50%;
     }
     100% {
-      background-position: 0% 100%;
+        background-position: 0% 100%;
     }
 }
 
@@ -43,8 +43,8 @@
     left: 0;
     right: 0;
     z-index: 10;
-    position: sticky;
     padding: 1.2rem;
+    position: sticky;
     backdrop-filter: blur(8px);
     background-color: rgba(0, 0, 0, 0.6);
 }
@@ -442,6 +442,7 @@
 .reviewContentImage .reviewImageProf {
     font-size: 1.2rem;
     color: var(--dark);
+    text-align: center;
 }
 
 .reviewContentImage .reviewImageProf .reviewProfInfo p {
