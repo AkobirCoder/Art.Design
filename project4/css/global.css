@@ -84,7 +84,6 @@ img {
     border-bottom-right-radius: 1rem;
     background: rgba(0, 0, 0, 0.8);
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
-
 }
 
 .sidebar.active {
@@ -105,6 +104,7 @@ img {
 }
 
 .sidebarContent .sidebarLogo {
+    margin: 2rem 0rem;
     align-self: center;
 }
 
@@ -142,9 +142,10 @@ img {
 
 .sidebarNavbarItems .sidebarNavbarItem a {
     color: #fff;
-    padding: 1rem 3rem;
     display: block;
     font-weight: 600;
+    padding: 1rem 3rem;
+    letter-spacing: 1px;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.3s ease;
@@ -153,6 +154,24 @@ img {
 .sidebarNavbarItems .sidebarNavbarItem a:hover {
     opacity: 0.7;
     background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebarContent .sidebarContentFooter {
+    margin: 2rem 0rem;
+    align-self: center;
+}
+
+.sidebarContentFooter p,
+.sidebarContentFooter a {
+    color: #979797;
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--Playfair);
+}
+
+.sidebarContentFooter a:hover {
+    text-decoration: underline;
 }
 
 .backdrop {
@@ -169,6 +188,7 @@ img {
     background: rgba(0, 0, 0, 0.7);
 }
 
+/* Scroll to top butotn styles */
 .scrollToTopBtnGradient {
     background: linear-gradient(to bottom, var(--extraDark), #979797);
     background-size: 180% 180%;
