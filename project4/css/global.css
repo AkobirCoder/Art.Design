@@ -44,6 +44,131 @@ img {
     text-transform: uppercase;
 }
 
+/* Sidebar menu styles */
+.headerSection .aside #toggleSidebar {
+    top: 50%;
+    opacity: 0;
+    border: none;
+    z-index: 100;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    transform: translateX(50%);
+    transform: translateY(-50%);
+    background: var(--extraDark);
+    padding: 1rem 1rem 1rem 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.aside #toggleSidebar.visible {
+    opacity: 1;
+}
+
+.aside #toggleSidebar i {
+    font-size: 1.4rem;
+}
+
+.aside .sidebar {
+    top: 0;
+    z-index: 50;
+    left: -22rem;
+    width: 22rem;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    backdrop-filter: blur(8px);
+    transition: left 0.6s ease;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar.active .sidebarContent {
+    opacity: 1;
+}
+
+.sidebarContent {
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: opacity 0.6s ease;
+}
+
+.sidebarContent .sidebarLogo {
+    align-self: center;
+}
+
+.sidebarContent .sidebarLogo a {
+    color: #fff;
+    font-size: 2rem;
+    position: relative;
+    padding: 0rem 1rem;
+    text-decoration: none;
+    font-family: var(--Playfair);
+}
+
+.sidebarLogo a i {
+    top: 4px;
+    right: 4px;
+    font-size: 0.8rem;
+    position: absolute;
+}
+
+.sidebarContent .sidebarNavigationMenu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebarNavigationMenu .sidebarNavbarItems {
+    list-style: none;
+    flex-direction: column;
+}
+
+.sidebarNavbarItems .sidebarNavbarItem {
+    margin-bottom: 1rem;
+}
+
+.sidebarNavbarItems .sidebarNavbarItem a {
+    color: #fff;
+    padding: 1rem 3rem;
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.sidebarNavbarItems .sidebarNavbarItem a:hover {
+    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.backdrop {
+    inset: 0;
+    z-index: 25;
+    position: fixed;
+    pointer-events: none;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.backdrop.active {
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.7);
+}
+
 .scrollToTopBtnGradient {
     background: linear-gradient(to bottom, var(--extraDark), #979797);
     background-size: 180% 180%;

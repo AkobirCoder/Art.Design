@@ -79,15 +79,12 @@
 }
 
 .navigationMenu .navigationMenuNavbar .navbarItems {
+    display: flex;
     list-style: none;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
     font-family: var(--Roboto);
-}
-
-.navigationMenuNavbar .navbarItems .navbarItem {
-    display: inline-block;
 }
 
 .navigationMenuNavbar .navbarItems .navbarItem a {
@@ -108,7 +105,7 @@
 .headerSection .banner {
     color: #fff;
     display: flex;
-    padding-top: 15%;
+    padding-top: 10%;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -152,6 +149,7 @@
 }
 
 .bannerForm form .formInputSearch {
+    width: 90%;
     border: none;
     outline: none;
     font-size: 1.2rem;
@@ -165,9 +163,9 @@
 }
 
 .bannerForm form .formInputSearch[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-    appearance: none;
     display: none;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .bannerForm form .formBtnSearch {
@@ -448,6 +446,7 @@
 .reviewContentImage .reviewImageProf .reviewProfInfo p {
     margin-bottom: 1rem;
     display: inline-block;
+    font-family: var(--Quicksand);
 }
 
 .reviewContentImage .reviewImageProf .reviewProfInfo a {
@@ -504,6 +503,7 @@
 
 .reviewContentInfo .reviewValuation i {
     opacity: 0.5;
+    cursor: pointer;
     color: var(--dark);
 }
 
