@@ -44,8 +44,148 @@ img {
     text-transform: uppercase;
 }
 
+/* Login modal styles */
+.banner .openModal {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 0.5rem 1.2rem;
+    margin: 2rem 1rem 0rem;
+    background: var(--dark);
+    transition: all 0.3s ease;
+    font-family: var(--Roboto);
+}
+
+.openModal:hover {
+    color: #cbcbcb;
+    transform: translateY(-25%);
+}
+
+.openModal:focus {
+    box-shadow: 0px 0px 10px 3px var(--shadow);
+}
+
+.signInModal {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 150;
+    display: none;
+    position: fixed;
+    transition: none;
+    align-items: center;
+    transform: scale(1.1);
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.signInModal .signInModalContent {
+    width: 375px;
+    border-radius: 10px;
+    background-color: #979797;
+    transition: opacity 4s ease;
+}
+
+.signInModalContent .signInModalContentTitle {
+    display: flex;
+    padding: 2rem 1.5rem;
+    justify-content: center;
+    background: var(--extraDark);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.signInModalContentTitle h4 {
+    font-size: 2rem;
+    font-weight: 100;
+    font-family: var(--Playfair);
+}
+
+.signInModalContent .signInModalContentInput {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: #cbcbcb;
+}
+
+.signInModalContentInput form .contentInputItem {
+    display: flex;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contentInputItem label {
+    font-size: 1rem;
+    color: var(--dark);
+    margin-bottom: 0.8rem;
+    font-family: var(--Quicksand);
+}
+
+.contentInputItem label[for="password"] {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentInputItem label[for="password"] a {
+    color: #036dde;
+    text-decoration: none;
+}
+
+.contentInputItem input {
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border: 2px solid #979797;
+}
+
+.contentInputItem input:focus {
+    border-color: #464646;
+}
+
+.signInModalContentInput .signIn {
+    width: 100%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background: #1F883D;
+    font-family: var(--Roboto);
+}
+
+.signInModalContentInput .signIn:hover {
+    background: #1e7437;
+}
+
+.closeSignInModal {
+    width: 100%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    background: var(--dark);
+    font-family: var(--Roboto);
+}
+
+.closeSignInModal:hover {
+    background: var(--extraDark);
+}
+
 /* Sidebar menu styles */
-.headerSection .aside #toggleSidebar {
+#toggleSidebar {
     top: 50%;
     opacity: 0;
     border: none;
@@ -61,19 +201,19 @@ img {
     border-bottom-right-radius: 1rem;
 }
 
-.aside #toggleSidebar.visible {
+#toggleSidebar.visible {
     opacity: 1;
 }
 
-.aside #toggleSidebar i {
+#toggleSidebar i {
     font-size: 1.4rem;
 }
 
-.aside .sidebar {
+.sidebar {
     top: 0;
     z-index: 50;
-    left: -22rem;
-    width: 22rem;
+    left: -18rem;
+    width: 18rem;
     height: 100vh;
     position: fixed;
     overflow-y: auto;
@@ -132,6 +272,7 @@ img {
 }
 
 .sidebarNavigationMenu .sidebarNavbarItems {
+    display: flex;
     list-style: none;
     flex-direction: column;
 }
@@ -144,6 +285,7 @@ img {
     color: #fff;
     display: block;
     font-weight: 600;
+    font-size: 0.8rem;
     padding: 1rem 3rem;
     letter-spacing: 1px;
     text-decoration: none;
@@ -159,12 +301,13 @@ img {
 .sidebarContent .sidebarContentFooter {
     margin: 2rem 0rem;
     align-self: center;
+    padding: 0rem 0.5rem;
 }
 
 .sidebarContentFooter p,
 .sidebarContentFooter a {
     color: #979797;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-align: center;
     text-decoration: none;
     font-family: var(--Playfair);

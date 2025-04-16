@@ -49,7 +49,7 @@
                                             <a href="#reviews">reviews</a>
                                         </li>
                                         <li class="navbarItem">
-                                            <a href="./contact.html">contact us</a>
+                                            <a href="./contact.html">contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -89,7 +89,7 @@
                                             <a href="#reviews">reviews</a>
                                         </li>
                                         <li class="sidebarNavbarItem">
-                                            <a href="./contact.html">contact us</a>
+                                            <a href="./contact.html">contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -122,6 +122,32 @@
                                         <i class="fas fa-search"></i>
                                     </button>
                                 </form>
+                            </div>
+                            <button id="openSignInModal" class="openSignInModal openModal">Sign in</button>
+                            <button id="openSignUpModal" class="openSignUpModal openModal">Sign up</button>
+                            <div id="signInModal" class="signInModal">
+                                <div class="signInModalContent">
+                                    <div class="signInModalContentTitle">
+                                        <h4>Sign in to Art.Design</h4>
+                                    </div>
+                                    <div class="signInModalContentInput">
+                                        <form action="https://echo.htmlacademy.ru" method="GET">
+                                            <div class="contentInputItem">
+                                                <label for="email">Username or email address</label>
+                                                <input type="text" name="Email" id="email" required>
+                                            </div>
+                                            <div class="contentInputItem">
+                                                <label for="password">
+                                                    <span>Password</span>
+                                                    <a href="#">Forgot password?</a>
+                                                </label>
+                                                <input type="password" name="Password" id="password">
+                                            </div>
+                                            <button id="signIn" class="signIn">Sign in</button>
+                                        </form>
+                                        <button id="closeSignInModal" class="closeSignInModal">Cancel</button>
+                                    </div>
+                                </div>
                             </div>
                             <button id="scrollToTopBtn" class="scrollToTopBtnGradient" title="Go to top">
                                 <i class="fa-solid fa-up-long"></i>
@@ -768,6 +794,7 @@
         <!-- /Footer section -->
         
         <!-- JS links -->
+        <script src="./js/sign-in.js"></script>
         <script src="./js/sidebar.js"></script>
         <script src="./js/reviews-carousel.js"></script>
         <script src="./js/scroll-to-top-btn.js"></script>
