@@ -1,4 +1,5 @@
 const toggleButton = document.getElementById("toggleSidebar");
+const sidebarToggle = document.querySelectorAll(".sidebarNavbarItem");
 const sidebar = document.getElementById("sidebar");
 const backdrop = document.getElementById("backdrop");
 const sidebarOpenBtn = document.getElementById("sidebarOpenBtn");
@@ -23,6 +24,15 @@ toggleButton.addEventListener("click", () => {
     }
 
     updateButtonIcon();
+});
+
+sidebarToggle.forEach((item) => {
+    item.addEventListener("click", () => {
+        isSlidebarOpen = false;
+        sidebar.classList.remove("active");
+        backdrop.classList.remove("active");
+        updateButtonIcon();
+    });
 });
 
 backdrop.addEventListener("click", () => {

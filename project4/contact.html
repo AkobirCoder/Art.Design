@@ -19,15 +19,135 @@
         <link rel="stylesheet" href="./css/contact.css">
     </head>
     <body>
+        <!-- Contact header section -->
+            <header id="contact" class="headerSection contactHeaderSection">
+
+                <!-- Navigation menu -->
+                    <nav id="navbar" class="navbar contactHeaderSectionNavbar">
+                        <div class="container">
+                            <div class="navigationMenu contactHeaderSectionNavigationMenu">
+                                <div class="navigationMenuLogo contactHeaderSectionNavigationMenuLogo">
+                                    <a href="#">Art.Design
+                                        <i class="fa-regular fa-registered"></i>
+                                    </a>
+                                </div>
+                                <div class="navigationMenuNavbar contactHeaderSectionNavigationMenuNavbar">
+                                    <ul class="navbarItems">
+                                        <li class="navbarItem">
+                                            <a href="./index.html">home</a>
+                                        </li>
+                                        <li class="navbarItem">
+                                            <a href="#design">design</a>
+                                        </li>
+                                        <li class="navbarItem">
+                                            <a href="#blog">blog</a>
+                                        </li>
+                                        <li class="navbarItem">
+                                            <a href="#about">about</a>
+                                        </li>
+                                        <li class="navbarItem">
+                                            <a href="#reviews">reviews</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                <!-- /Navigation menu -->
+                
+                <!-- Contact section banner -->
+                    <div id="banner" class="banner contactBanner">
+                        <div class="container">
+                            <div class="bannerInfo contactBannerInfo">
+                                <h1 class="bannerTitle contactBannerTitle">
+                                    <span>Art.</span> Design Contact
+                                </h1>
+                                <p class="bannerText contactBannerText">
+                                    Everything that you want to know about art & design
+                                </p>
+                            </div>
+                            <button id="scrollToTopBtn" class="scrollToTopBtnGradient" title="Go to top">
+                                <i class="fa-solid fa-up-long"></i>
+                            </button>
+                        </div>
+                    </div>
+                <!-- /Contact section banner -->
+
+            </header>
+        <!-- /Contact header section -->
+
         <!-- Contact section -->
-            <section id="contact" class="contactSection">
-                <nav class="contactNavbar">
-                    
-                </nav>
+            <section class="contactSection">
                 <div class="container">
-                    
+                    <div class="sectionInfo">
+                        <h2 class="sectionTitle">
+                            Contact us
+                        </h2>
+                        <p class="sectionSubtitle">
+                            If you have questions and suggestions of interest leave here
+                        </p>
+                    </div>
+                    <div class="contactSectionContent">
+                        <div class="contactSectionContentItems">
+                            <div class="contactInput">
+                                <form action="https://echo.htmlacademy.ru" method="GET">
+                                    <textarea name="About subject" id="" cols="100" rows="10" placeholder="Enter Message"></textarea>
+                                    <div class="contactInputItems">
+                                        <div class="contactInputItem">
+                                            <input type="text" name="Name" id="name" placeholder="Enter your name" required>
+                                        </div>
+                                        <div class="contactInputItem">
+                                            <input type="email" name="Email" id="email" placeholder="Enter your email" required>
+                                        </div>
+                                        <div class="contactInputItem">
+                                            <input type="tel" name="Phone number" id="number" required>
+                                        </div>
+                                    </div>
+                                    <input type="text" name="" id="">
+                                    <button class="contactInputBtn" type="submit">Submit</button>
+                                </form>
+                            </div>
+                            <div class="contactInfo">
+                                <div class="contactInfoItem">
+                                    <div class="contactAddress">
+                                        <img src="./icons/contact-location.svg" alt="Contact location icon">
+                                        <div class="address">
+                                            <h5>Address</h5>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, nulla?</p>
+                                        </div>
+                                    </div>
+                                    <div class="contactPhoneNumber">
+                                        <img src="./icons/contact-phone.svg" alt="Contact phone icon">
+                                        <div class="phoneNumber">
+                                            <h5>+12345678900</h5>
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, veritatis?</p>
+                                        </div>
+                                    </div>
+                                    <div class="contactEmail">
+                                        <img src="./icons/contact-email.svg" alt="Contact email icon">
+                                        <div class="email">
+                                            <h5>example@gmail.com</h5>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, iste.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contactMap">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.448596755102!2d69.24084128704217!3d41.31071301531938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0c361bbdf5%3A0xd0dd857fd9475dc!2sNRG%20U-TOWER%20Turar-joy%20majmuasi!5e0!3m2!1suz!2s!4v1744895863550!5m2!1suz!2s"
+                                loading="lazy"
+                                allowfullscreen=""
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
             </section>
-        <!-- /Contact section -->        
+        <!-- /Contact section -->
+
+        
+        <!-- JS links -->
+        <script src="./js/scroll-to-top-btn.js"></script>
     </body>
 </html>

@@ -29,107 +29,8 @@
 }
 
 /* Header section styles */
-.headerSection {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url("../images/banner-bg.jpg")
-                center/cover
-                no-repeat
-                fixed;
-}
-
-.navbar {
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    padding: 1.2rem;
-    position: sticky;
-    backdrop-filter: blur(8px);
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.navigationMenu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navigationMenu .navigationMenuLogo a {
-    color: #fff;
-    display: block;
-    font-size: 2rem;
-    position: relative;
-    padding: 0rem 1rem;
-    margin: 0rem 0.2rem;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-family: var(--Playfair);
-}
-
-.navigationMenu .navigationMenuLogo a i {
-    top: 4px;
-    right: 4px;
-    font-size: 0.8rem;
-    position: absolute;
-} 
-
-.navigationMenu .navigationMenuNavbar {
-    padding: 0.8rem 0rem;
-}
-
-.navigationMenu .navigationMenuNavbar .navbarItems {
-    display: flex;
-    list-style: none;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-family: var(--Roboto);
-}
-
-.navigationMenuNavbar .navbarItems .navbarItem a {
-    color: #fff;
-    font-size: 0.8rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: 0.2rem;
-    margin-right: 0.2rem;
-    display: inline-block;
-    text-decoration: none;
-    transition: opacity 0.5s ease;
-}
-
-.navbarItems .navbarItem a:hover {
-    opacity: 0.7;
-}
-
 .headerSection .banner {
-    color: #fff;
-    display: flex;
     padding-top: 10%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.banner .bannerInfo .bannerTitle {
-    font-size: 5rem;
-    line-height: 1.2;
-    font-family: var(--Playfair);
-}
-
-.bannerInfo .bannerTitle span {
-    color: var(--extraDark);
-    font-family: var(--Playfair);
-}
-
-.bannerInfo .bannerText {
-    font-weight: 300;
-    font-size: 1.2rem;
-    word-spacing: 2px;
-    padding: 1rem 0rem 2rem;
-    font-family: var(--Roboto);
-    text-transform: capitalize;
 }
 
 .banner .bannerForm form {
@@ -303,7 +204,7 @@
 }
 
 .blogSectionCard .blogSectionCardInfo {
-    padding: 0rem 1rem;
+    padding: 0rem 2.2rem;
     margin: 2.2rem 0rem;
 }
 

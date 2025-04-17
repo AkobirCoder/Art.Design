@@ -1,3 +1,15 @@
+/* Root styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Playfair: "Playfair", serif;
+    --Quicksand: "Quicksand", sans-serif;
+    --Roboto: "Roboto", sans-serif;
+    --dark: #3c393d;
+    --shadow: #6f6f6f;
+    --extraDark: #2b2b2b;
+}
+
 /* Global styles */
 * {
     margin: 0px;
@@ -44,6 +56,109 @@ img {
     text-transform: uppercase;
 }
 
+/* Header section styles */
+.headerSection {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url("../images/banner-bg.jpg")
+                center/cover
+                no-repeat
+                fixed;
+}
+
+.navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 1.2rem;
+    position: sticky;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navigationMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigationMenu .navigationMenuLogo a {
+    color: #fff;
+    display: block;
+    font-size: 2rem;
+    position: relative;
+    padding: 0rem 1rem;
+    margin: 0rem 0.2rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-family: var(--Playfair);
+}
+
+.navigationMenu .navigationMenuLogo a i {
+    top: 4px;
+    right: 4px;
+    font-size: 0.8rem;
+    position: absolute;
+} 
+
+.navigationMenu .navigationMenuNavbar {
+    padding: 0.8rem 0rem;
+}
+
+.navigationMenu .navigationMenuNavbar .navbarItems {
+    display: flex;
+    list-style: none;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: var(--Roboto);
+}
+
+.navigationMenuNavbar .navbarItems .navbarItem a {
+    color: #fff;
+    font-size: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    display: inline-block;
+    text-decoration: none;
+    transition: opacity 0.5s ease;
+}
+
+.navbarItems .navbarItem a:hover {
+    opacity: 0.7;
+}
+
+.headerSection .banner {
+    color: #fff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .bannerInfo .bannerTitle {
+    font-size: 5rem;
+    line-height: 1.2;
+    font-family: var(--Playfair);
+}
+
+.bannerInfo .bannerTitle span {
+    color: var(--extraDark);
+    font-family: var(--Playfair);
+}
+
+.bannerInfo .bannerText {
+    font-weight: 300;
+    font-size: 1.2rem;
+    word-spacing: 2px;
+    padding: 1rem 0rem 2rem;
+    font-family: var(--Roboto);
+    text-transform: capitalize;
+}
+
 /* Login modal styles */
 .banner .openModal {
     border: none;
@@ -51,6 +166,7 @@ img {
     cursor: pointer;
     font-size: 1.2rem;
     letter-spacing: 1px;
+    border-radius: 0.5rem;
     padding: 0.5rem 1.2rem;
     margin: 2rem 1rem 0rem;
     background: var(--dark);
@@ -87,8 +203,8 @@ img {
 .signInModal .signInModalContent {
     width: 375px;
     border-radius: 10px;
-    background-color: #979797;
     transition: opacity 4s ease;
+    background-color: rgba(150, 150, 150, 0.8);
 }
 
 .signInModalContent .signInModalContentTitle {
@@ -96,8 +212,9 @@ img {
     padding: 2rem 1.5rem;
     justify-content: center;
     background: var(--extraDark);
-    border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .signInModalContentTitle h4 {
@@ -219,7 +336,7 @@ img {
     overflow-y: auto;
     overflow-x: hidden;
     backdrop-filter: blur(8px);
-    transition: left 0.6s ease;
+    transition: left 0.3s ease;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     background: rgba(0, 0, 0, 0.8);
@@ -331,7 +448,7 @@ img {
     background: rgba(0, 0, 0, 0.7);
 }
 
-/* Scroll to top butotn styles */
+/* Scroll to top button styles */
 .scrollToTopBtnGradient {
     background: linear-gradient(to bottom, var(--extraDark), #979797);
     background-size: 180% 180%;

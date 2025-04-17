@@ -1,0 +1,27 @@
+/* Contact section styles */
+.contactHeaderSection .contactBanner {
+    padding: 15%;
+}
+
+.contactSection {
+    padding: 4.5rem 0rem;
+}
+
+.contactSection .contactSectionContent {
+    /* display: flex; */
+    padding: 2rem;
+    margin: 2rem 0rem;
+    justify-content: center;
+}
+
+.contactSectionContent .contactSectionContentItems {
+    gap: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contactSectionContent .contactMap iframe {
+    border: 0;
+    width: 100%;
+    height: 500px;
+}
