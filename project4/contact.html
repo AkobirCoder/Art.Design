@@ -14,6 +14,8 @@
         <!-- Fontawesome icon link -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
+
         <!-- CSS links -->
         <link rel="stylesheet" href="./css/global.css">
         <link rel="stylesheet" href="./css/contact.css">
@@ -54,6 +56,49 @@
                         </div>
                     </nav>
                 <!-- /Navigation menu -->
+
+                <!-- Sidebar menu -->
+                    <aside id="aside" class="aside">
+                        <button id="toggleSidebar">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <div id="sidebar" class="sidebar">
+                            <div class="sidebarContent">
+                                <div class="sidebarLogo">
+                                    <a href="#">
+                                        Art.Design
+                                        <i class="fa-regular fa-registered"></i>
+                                    </a>
+                                </div>
+                                <div class="sidebarNavigationMenu">
+                                    <ul class="sidebarNavbarItems">
+                                        <li class="sidebarNavbarItem">
+                                            <a href="./index.html">home</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="#contact">design</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="#contact">blog</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="#contact">about</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="#contact">reviews</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sidebarContentFooter">
+                                    <p>
+                                        © 2025 <a href="#">Art.Design</a>. All content is protected by copyright and may not be reproduced without permission.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="backdrop" class="backdrop"></div>
+                    </aside>
+                <!-- /Sidebar menu -->
                 
                 <!-- Contact section banner -->
                     <div id="banner" class="banner contactBanner">
@@ -91,7 +136,7 @@
                         <div class="contactSectionContentItems">
                             <div class="contactInput">
                                 <form action="https://echo.htmlacademy.ru" method="GET">
-                                    <textarea name="About subject" id="" cols="100" rows="10" placeholder="Enter Message"></textarea>
+                                    <textarea name="Message" id="message" cols="30" rows="10" placeholder="Enter Message..."></textarea>
                                     <div class="contactInputItems">
                                         <div class="contactInputItem">
                                             <input type="text" name="Name" id="name" placeholder="Enter your name" required>
@@ -101,30 +146,41 @@
                                         </div>
                                         <div class="contactInputItem">
                                             <input type="tel" name="Phone number" id="number" required>
+                                            <p id="output"></p>
                                         </div>
                                     </div>
-                                    <input type="text" name="" id="">
-                                    <button class="contactInputBtn" type="submit">Submit</button>
+                                    <div class="contactSubmit">
+                                        <input type="text" name="Subject" id="subject" placeholder="Subject">
+                                        <button class="contactInputBtn" type="submit">Submit</button>
+                                    </div>
                                 </form>
                             </div>
                             <div class="contactInfo">
                                 <div class="contactInfoItem">
-                                    <div class="contactAddress">
-                                        <img src="./icons/contact-location.svg" alt="Contact location icon">
+                                    <div class="contactAddress infoItem">
+                                        <div class="infoItemImg">
+                                            <img id="addressIcon" src="./icons/contact-location.svg" alt="Contact location icon">
+                                        </div>
                                         <div class="address">
                                             <h5>Address</h5>
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, nulla?</p>
                                         </div>
                                     </div>
-                                    <div class="contactPhoneNumber">
-                                        <img src="./icons/contact-phone.svg" alt="Contact phone icon">
+                                    <div class="contactPhoneNumber infoItem">
+                                        <div class="infoItemImg">
+                                            <img id="phoneIcon" src="./icons/contact-phone.svg" alt="Contact location icon">
+                                        </div>
                                         <div class="phoneNumber">
                                             <h5>+12345678900</h5>
                                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, veritatis?</p>
                                         </div>
                                     </div>
-                                    <div class="contactEmail">
-                                        <img src="./icons/contact-email.svg" alt="Contact email icon">
+                                    <div class="contactEmail infoItem">
+                                        <div class="infoItemImg">
+                                            <div class="emailIcon">
+                                                <img id="emailIcon" src="./icons/contact-email.svg" alt="Contact location icon">
+                                            </div>
+                                        </div>
                                         <div class="email">
                                             <h5>example@gmail.com</h5>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, iste.</p>
@@ -146,8 +202,113 @@
             </section>
         <!-- /Contact section -->
 
-        
+        <!-- Contact footer section -->
+            <footer class="footerSection footerSectionGradient">
+                <div class="container">
+                    <div class="footerSectionNavigationMenu">
+                        <div class="footerSectionLogo">
+                            <a href="#header">Art.Design
+                                <i class="fa-regular fa-registered"></i>
+                            </a>
+                        </div>
+                        <div class="footerSectionNavbar">
+                            <ul class="footerSectionNavbarItems">
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./index.html">home</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">about us</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">designs</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">blogs</a>
+                                </li>
+                            </ul>
+                            <ul class="footerSectionNavbarItems">
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./index.html">home</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">about us</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">designs</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">blogs</a>
+                                </li>
+                            </ul>
+                            <ul class="footerSectionNavbarItems">
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./index.html">home</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">about us</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">designs</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">blogs</a>
+                                </li>
+                            </ul>
+                            <ul class="footerSectionNavbarItems">
+                                <li class="footerSectionNavbarItem">
+                                    <a href="./index.html">home</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">about us</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">designs</a>
+                                </li>
+                                <li class="footerSectionNavbarItem">
+                                    <a href="#">blogs</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="">
+                        You can also follow us on these pages as well
+                    </p>
+                    <div class="socialNetworks">
+                        <a class="socialNetwork" href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a class="socialNetwork" href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="socialNetwork" href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="socialNetwork" href="#">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                        <a class="socialNetwork" href="#">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                    <div class="footerText">
+                        <p>
+                            <span class="art">Art.</span>
+                            <span class="design">Design</span>
+                            contact page
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        <!-- /Contact footer section -->
+
+        <!-- JS libraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
         <!-- JS links -->
+        <script src="./js/tel-num.js"></script>
+        <script src="./js/icon-mover.js"></script>
+        <script src="./js/sidebar.js"></script>
         <script src="./js/scroll-to-top-btn.js"></script>
     </body>
 </html>

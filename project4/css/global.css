@@ -159,7 +159,7 @@ img {
     text-transform: capitalize;
 }
 
-/* Login modal styles */
+/* SignIn modal styles */
 .banner .openModal {
     border: none;
     color: #fff;
@@ -494,4 +494,166 @@ img {
     background-size: 180% 180%;
     animation: customScrollBtn-gradient 5s ease infinite;
     box-shadow: 0px 0px 3px 10px rgba(203, 203, 203, 0.463);
+}
+
+/* Footer section styles */
+.footerSectionGradient {
+    background: linear-gradient(to bottom, var(--extraDark), #979797);
+    background-size: 180% 180%;
+    animation: customHome-gradient 5s ease infinite;
+}
+
+@keyframes customHome-gradient {
+    0% {
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+.footerSection {
+    color: #fff;
+    padding: 4.5rem 0rem;
+}
+
+.footerSection .footerSectionNavigationMenu {
+    display: flex;
+    align-items: center;
+    padding: 0rem 1.2rem;
+    justify-content: space-between;
+}
+
+.footerSectionNavigationMenu .footerSectionLogo a {
+    color: #fff;
+    font-size: 2rem;
+    padding: 0rem 1rem;
+    position: relative;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    font-family: var(--Playfair);
+}
+
+.footerSectionNavigationMenu .footerSectionLogo a i {
+    top: 4px;
+    right: 4px;
+    font-size: 0.8rem;
+    position: absolute;
+}
+
+.footerSectionNavigationMenu {
+    margin-bottom: 4.5rem;
+}
+
+.footerSectionNavigationMenu .footerSectionNavbar {
+    display: grid;
+    column-gap: 5.6rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footerSectionNavbarItems {
+    list-style: none;
+}
+
+.footerSectionNavbarItem {
+    padding: 0.5rem;
+}
+
+.footerSectionNavbarItem a {
+    color: #9e9e9e;
+    font-size: 1.1rem;
+    padding: 0rem 0.5rem;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.footerSectionNavbarItem a:hover {
+    color: #e1e1e1;
+    text-decoration: underline;
+}
+
+.footerSection p {
+    display: flex;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    font-family: var(--Playfair);
+}
+
+.footerSection .socialNetworks {
+    display: flex;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+.footerSection .socialNetworks .socialNetwork {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    display: flex;
+    font-size: 20px;
+    border-radius: 50%;
+    align-items: center;
+    margin: 0rem 0.5rem;
+    text-decoration: none;
+    justify-content: center;
+    border: 2px solid #fff;
+    transition: all 1s ease;
+}
+
+.socialNetworks .socialNetwork:hover {
+    color: var(--dark);
+    background: #fff;
+    transform: rotate(360deg);
+}
+
+.footerSection .footerText {
+    display: flex;
+    justify-content: center;
+}
+
+.footerText p {
+    display: flex;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    justify-content: center;
+    font-family: var(--Playfair);
+}
+
+.footerSection p .art {
+    font-size: 1.2rem;
+    padding: 0rem 15px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-right: none;
+    transition: all 0.3s ease;
+    font-family: var(--Playfair);
+}
+
+.footerSection p .design {
+    margin-right: 2px;
+    padding: 0px 2px;
+    font-size: 1.2rem;
+    background: #fff;
+    color: var(--dark);
+    letter-spacing: 2px;
+    align-self: stretch;
+    transition: all 0.3s ease;
+    font-family: var(--Playfair);
+}
+
+.footerText p:hover .art {
+    background: #fff;
+    color: var(--dark);
+}
+
+.footerText p:hover .design {
+    color: #fff;
+    border: 1px solid #fff;
+    border-left: none;
+    background: transparent;
 }

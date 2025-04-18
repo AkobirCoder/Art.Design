@@ -1,3 +1,15 @@
+/* Root styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Playfair: "Playfair", serif;
+    --Quicksand: "Quicksand", sans-serif;
+    --Roboto: "Roboto", sans-serif;
+    --dark: #3c393d;
+    --shadow: #6f6f6f;
+    --extraDark: #2b2b2b;
+}
+
 /* Contact section styles */
 .contactHeaderSection .contactBanner {
     padding: 15%;
@@ -8,20 +20,252 @@
 }
 
 .contactSection .contactSectionContent {
-    /* display: flex; */
     padding: 2rem;
     margin: 2rem 0rem;
-    justify-content: center;
 }
 
 .contactSectionContent .contactSectionContentItems {
     gap: 4rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr;
+}
+
+.contactSectionContentItems .contactInput {
+    padding: 1rem;
+}
+
+.contactInput form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactInput form textarea {
+    margin-bottom: 1.5rem;
+}
+
+.contactInput form textarea,
+.contactInput form input {
+    opacity: 0.7;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    padding: 1.2rem 1.2rem;
+    font-family: var(--Roboto);
+    border: 1px solid #979797;
+}
+
+.contactInput form textarea:focus,
+.contactInput form input:focus {
+    outline: none;
+    box-shadow: none;
+    border-width: 2px;
+    border-color: #5c5c5c;
+}
+
+.contactInput form .contactInputItems {
+    gap: 1.5rem;
+    display: grid;
+    margin-bottom: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contactInputItems .contactInputItem input {
+    width: 100%;
+    opacity: 0.7;
+    color: #5c5c5c;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    box-sizing: border-box;
+    padding: 1.2rem 1.2rem;
+    font-family: var(--Roboto);
+    border: 1px solid #979797;
+}
+
+.contactInputItems .contactInputItem input:focus {
+    outline: none;
+    box-shadow: none;
+    border-width: 2px;
+    border-color: #5c5c5c;
+}
+
+.contactInput form .contactSubmit {
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: calc(50% - 0.75rem) calc(50% - 0.75rem);
+}
+
+.contactSubmit input,
+.contactSubmit button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contactSubmit .contactInputBtn {
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: all 0.3s ease;
+    font-family: var(--Roboto);
+    background: linear-gradient(to right, #959595 0%, #5b5b5b 51%, #959595 100%);
+    background-size: 200% auto;
+}
+
+.contactSubmit .contactInputBtn:hover {
+    box-shadow: 0px 0px 10px var(--shadow);
+}
+
+.contactSubmit .contactInputBtn:hover {
+    background-position: right center;
+}
+
+.contactSectionContentItems .contactInfo {
+    display: flex;
+    padding: 1rem;
+}
+
+.contactInfo .contactInfoItem {
+    display: grid;
+    row-gap: 3rem;
+}
+
+.contactInfoItem .infoItem {
+    display: grid;
+    column-gap: 2rem;
+    align-items: center;
+    grid-template-columns: 1fr 4fr;
+}
+
+.infoItem .infoItemImg {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoItem .infoItemImg img {
+    width: 3rem;
+}
+
+@keyframes animatedLocation {
+    0% {
+        transform: translateY(0%);
+    }
+
+    30% {
+        transform: translateY(-60%);
+    }
+
+    60% {
+        transform: translateY(-40%);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.infoItemImg  #addressIcon {
+    cursor: pointer;
+    position: relative;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+
+.infoItemImg  #addressIcon.animatedLocation {
+    animation: animatedLocation 0.6s ease infinite;
+}
+
+@keyframes animatedPhone {
+    0% {transform: rotate(0deg);}
+    20% {transform: rotate(-15deg);}
+    40% {transform: rotate(15deg);}
+    60% {transform: rotate(-10deg);}
+    80% {transform: rotate(10deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.infoItemImg #phoneIcon {
+    cursor: pointer;
+    position: relative;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+}
+
+.infoItemImg #phoneIcon.animatedPhone {
+    animation: animatedPhone 0.6s ease-in-out infinite;
+}
+
+@keyframes animatedEmail {
+    0% {
+        transform: translateX(-120%) rotate(0deg);
+    }
+    10% {
+        transform: translateX(-90%) rotate(5deg);
+    }
+    20% {
+        transform: translateX(-60%) rotate(-5deg);
+    }
+    30% {
+        transform: translateX(-30%) rotate(5deg);
+    }
+    40% {
+        transform: translateX(0%) rotate(-5deg);
+    }
+    50% {
+        transform: translateX(30%) rotate(5deg);
+    }
+    60% {
+        transform: translateX(60%) rotate(-5deg);
+    }
+    70% {
+        transform: translateX(90%) rotate(5deg);
+    }
+    80% {
+        transform: translateX(120%) rotate(-5deg);
+    }
+    100% {
+        transform: translateX(150%) rotate(0deg);
+    }
+}
+
+.infoItem .emailIcon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoItemImg .emailIcon #emailIcon {
+    cursor: pointer;
+    position: absolute;
+}
+
+.infoItemImg .emailIcon #emailIcon.animatedEmail {
+    animation: animatedEmail 3s linear 4;
+}
+
+.infoItem h5 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: var(--Roboto);
+}
+
+.infoItem p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.contactSectionContent .contactMap {
+    padding: 1rem;
+    margin: 2rem 0rem;
 }
 
 .contactSectionContent .contactMap iframe {
-    border: 0;
     width: 100%;
     height: 500px;
 }
