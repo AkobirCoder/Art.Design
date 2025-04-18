@@ -148,21 +148,13 @@
 }
 
 @keyframes animatedLocation {
-    0% {
-        transform: translateY(0%);
-    }
+    0% {transform: translateY(0%);}
 
-    30% {
-        transform: translateY(-60%);
-    }
+    30% {transform: translateY(-60%);}
 
-    60% {
-        transform: translateY(-40%);
-    }
+    60% {transform: translateY(-40%);}
 
-    100% {
-        transform: translateY(-50%);
-    }
+    100% {transform: translateY(-50%);}
 }
 
 .infoItemImg  #addressIcon {
@@ -245,7 +237,7 @@
 }
 
 .infoItemImg .emailIcon #emailIcon.animatedEmail {
-    animation: animatedEmail 3s linear 4;
+    animation: animatedEmail 3s linear 2;
 }
 
 .infoItem h5 {
