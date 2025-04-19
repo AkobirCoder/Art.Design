@@ -39,7 +39,7 @@
                                             <a href="./index.html">home</a>
                                         </li>
                                         <li class="navbarItem">
-                                            <a href="#design">design</a>
+                                            <a href="./design.html">design</a>
                                         </li>
                                         <li class="navbarItem">
                                             <a href="#blog">blog</a>
@@ -76,7 +76,7 @@
                                             <a href="./index.html">home</a>
                                         </li>
                                         <li class="sidebarNavbarItem">
-                                            <a href="#contact">design</a>
+                                            <a href="./design.html">design</a>
                                         </li>
                                         <li class="sidebarNavbarItem">
                                             <a href="#contact">blog</a>
@@ -110,6 +110,32 @@
                                 <p class="bannerText contactBannerText">
                                     Everything that you want to know about art & design
                                 </p>
+                            </div>
+                            <button id="openSignInModal" class="openSignInModal openModal">Sign in</button>
+                            <button id="openSignUpModal" class="openSignUpModal openModal">Sign up</button>
+                            <div id="signInModal" class="signInModal">
+                                <div class="signInModalContent">
+                                    <div class="signInModalContentTitle">
+                                        <h4>Sign in to Art.Design</h4>
+                                    </div>
+                                    <div class="signInModalContentInput">
+                                        <form action="https://echo.htmlacademy.ru" method="GET">
+                                            <div class="contentInputItem">
+                                                <label for="email">Username or email address</label>
+                                                <input type="text" name="Email" id="email" required>
+                                            </div>
+                                            <div class="contentInputItem">
+                                                <label for="password">
+                                                    <span>Password</span>
+                                                    <a href="#">Forgot password?</a>
+                                                </label>
+                                                <input type="password" name="Password" id="password">
+                                            </div>
+                                            <button id="signIn" class="signIn">Sign in</button>
+                                        </form>
+                                        <button id="closeSignInModal" class="closeSignInModal">Cancel</button>
+                                    </div>
+                                </div>
                             </div>
                             <button id="scrollToTopBtn" class="scrollToTopBtnGradient" title="Go to top">
                                 <i class="fa-solid fa-up-long"></i>
@@ -220,7 +246,7 @@
                                     <a href="#">about us</a>
                                 </li>
                                 <li class="footerSectionNavbarItem">
-                                    <a href="#">designs</a>
+                                    <a href="./design.html">designs</a>
                                 </li>
                                 <li class="footerSectionNavbarItem">
                                     <a href="#">blogs</a>
@@ -234,7 +260,7 @@
                                     <a href="#">about us</a>
                                 </li>
                                 <li class="footerSectionNavbarItem">
-                                    <a href="#">designs</a>
+                                    <a href="./design.html">designs</a>
                                 </li>
                                 <li class="footerSectionNavbarItem">
                                     <a href="#">blogs</a>
@@ -248,7 +274,7 @@
                                     <a href="#">about us</a>
                                 </li>
                                 <li class="footerSectionNavbarItem">
-                                    <a href="#">designs</a>
+                                    <a href="./design.html">designs</a>
                                 </li>
                                 <li class="footerSectionNavbarItem">
                                     <a href="#">blogs</a>
@@ -262,7 +288,7 @@
                                     <a href="#">about us</a>
                                 </li>
                                 <li class="footerSectionNavbarItem">
-                                    <a href="#">designs</a>
+                                    <a href="./design.html">designs</a>
                                 </li>
                                 <li class="footerSectionNavbarItem">
                                     <a href="#">blogs</a>
@@ -306,6 +332,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
         <!-- JS links -->
+        <script src="./js/sign-in.js"></script>
         <script src="./js/tel-num.js"></script>
         <script src="./js/icon-mover.js"></script>
         <script src="./js/sidebar.js"></script>
