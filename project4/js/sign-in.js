@@ -1,6 +1,20 @@
 const modal = document.getElementById("signInModal");
 const openBtn = document.getElementById("openSignInModal");
 const closeBtn = document.querySelector(".closeSignInModal");
+const signInBtn = document.getElementById("signIn");
+const passwordInput = document.getElementById("password");
+
+signInBtn.disabled = true;
+
+function checkPassword() {
+    if (passwordInput.value.trim() === "") {
+        signInBtn.disabled = true;
+    } else {
+        signInBtn.disabled = false;
+    }
+}
+
+passwordInput.addEventListener("input", checkPassword);
 
 function fadeInModal() {
     modal.style.display = "flex";

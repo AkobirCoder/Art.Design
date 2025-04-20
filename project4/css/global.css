@@ -259,7 +259,7 @@ img {
     outline: none;
     border-radius: 5px;
     padding: 0.5rem 1rem;
-    border: 2px solid #979797;
+    border: 1px solid #979797;
 }
 
 .contentInputItem input:focus {
@@ -282,6 +282,12 @@ img {
 
 .signInModalContentInput .signIn:hover {
     background: #1e7437;
+}
+
+.signInModalContentInput .signIn:disabled {
+    color: #fff;
+    cursor: not-allowed;
+    background: #65a878;
 }
 
 .closeSignInModal {
