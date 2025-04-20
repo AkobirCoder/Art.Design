@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Art.Design - Design</title>
+        <link rel="icon" type="images/png" href="./images/favicon.png">
+
+        <!-- Font links -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- Fontawesome icon link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+        <!-- CSS links -->
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/design.css">
+    </head>
+    <body>
+        <!-- Design header section -->
+            <header id="design" class="headerSection designHeaderSection">
+
+                <!-- Design navigation menu -->
+                    <nav id="navbar" class="navbar designHeaderSectionNavbar">
+                        <div class="container">
+                            <div class="navigationMenu designHeaderSectionNavigationMenu">
+                                <div class="navigationMenuLogo designSectionNavigationMenuLogo">
+                                    <a href="#">Art.Design
+                                        <i class="fa-regular fa-registered"></i>
+                                    </a>
+                                </div>
+                                <div class="navigationMenuNavbar designHeaderSectionNavigationMenuNavbar">
+                                    <ul class="navbarItems">
+                                        <li class="navbarItem">
+                                            <a href="./index.html">home</a>
+                                        </li>
+                                        <li class="navbarItem">
+                                            <a href="#blog">blog</a>
+                                        </li>
+                                        <li class="navbarItem">
+                                            <a href="#about">about</a>
+                                        </li>
+                                        <li class="navbarItem">
+                                            <a href="#reviews">reviews</a>
+                                        </li>
+                                        <li class="navbarItem">
+                                            <a href="./contact.html">contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                <!-- /Design navigation menu -->
+
+                <!-- Design sidebar menu -->
+                    <aside id="aside" class="aside">
+                        <button id="toggleSidebar">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <div id="sidebar" class="sidebar">
+                            <div class="sidebarContent">
+                                <div class="sidebarLogo">
+                                    <a href="#">
+                                        Art.Design
+                                        <i class="fa-regular fa-registered"></i>
+                                    </a>
+                                </div>
+                                <div class="sidebarNavigationMenu">
+                                    <ul class="sidebarNavbarItems">
+                                        <li class="sidebarNavbarItem">
+                                            <a href="./index.html">home</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="#design">blog</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="#design">about</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="#design">reviews</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="./contact.html">contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sidebarContentFooter">
+                                    <p>
+                                        © 2025 <a href="#">Art.Design</a>. All content is protected by copyright and may not be reproduced without permission.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="backdrop" class="backdrop"></div>
+                    </aside>
+                <!-- /Design sidebar menu -->
+                
+                <!-- Design section banner -->
+                    <div id="banner" class="banner designBanner">
+                        <div class="container">
+                            <div class="bannerInfo designBannerInfo">
+                                <h1 class="bannerTitle designBannerTitle">
+                                    <span>Art.</span> Design Designs
+                                </h1>
+                                <p class="bannerText designBannerText">
+                                    Everything that you want to know about art & design
+                                </p>
+                            </div>
+                            <div class="designBannerForm">
+                                <form action="https://echo.htmlacademy.ru" method="GET">
+                                    <input class="formInputSearch" type="search" id="formInput" name="Design" placeholder="find your design..." required>
+                                    <button class="formBtnSearch">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <button id="openSignInModal" class="openSignInModal openModal">Sign in</button>
+                            <button id="openSignUpModal" class="openSignUpModal openModal">Sign up</button>
+                            <div id="signInModal" class="signInModal">
+                                <div class="signInModalContent">
+                                    <div class="signInModalContentTitle">
+                                        <h4>Sign in to Art.Design</h4>
+                                    </div>
+                                    <div class="signInModalContentInput">
+                                        <form action="https://echo.htmlacademy.ru" method="GET">
+                                            <div class="contentInputItem">
+                                                <label for="email">Username or email address</label>
+                                                <input type="text" name="Email" id="email" required>
+                                            </div>
+                                            <div class="contentInputItem">
+                                                <label for="password">
+                                                    <span>Password</span>
+                                                    <a href="#">Forgot password?</a>
+                                                </label>
+                                                <input type="password" name="Password" id="password">
+                                            </div>
+                                            <button id="signIn" class="signIn" disabled>Sign in</button>
+                                        </form>
+                                        <button id="closeSignInModal" class="closeSignInModal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="scrollToTopBtn" class="scrollToTopBtnGradient" title="Go to top">
+                                <i class="fa-solid fa-up-long"></i>
+                            </button>
+                        </div>
+                    </div>
+                <!-- /Design section banner -->
+
+            </header>
+        <!-- /Design header section -->
+
+        <!-- Design page section -->
+            <section class="designPageSection">
+                <div class="container">
+                    <div class="sectionInfo">
+                        <h2 class="sectionTitle">
+                            Our designs
+                        </h2>
+                        <p class="sectionSubtitle">
+                            You can find all our designs here
+                        </p>
+                    </div>
+                </div>
+            </section>
+        <!-- /Design page section -->
+
+        <script src="./js/sidebar.js"></script>
+        <script src="./js/sign-in.js"></script>
+        <script src="./js/scroll-to-top-btn.js"></script>
+    </body> 
+</html>
