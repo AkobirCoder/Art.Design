@@ -196,9 +196,9 @@
     display: flex;
     font-size: 16px;
     cursor: pointer;
-    padding: 8px 20px;
     margin: 0rem 1.3rem;
     align-items: center;
+    padding: 0.5rem 1.5rem;
     justify-content: center;
     transition: all 0.3s ease;
     background: var(--extraDark);
