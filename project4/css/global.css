@@ -527,9 +527,13 @@ img {
 
 .footerSection .footerSectionNavigationMenu {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     padding: 0rem 1.2rem;
     justify-content: space-between;
+}
+
+.footerSectionNavigationMenu .footerSectionLogo {
+    margin-top: 0.5rem;
 }
 
 .footerSectionNavigationMenu .footerSectionLogo a {
