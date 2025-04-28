@@ -145,6 +145,10 @@
     font-family: var(--Playfair);
 }
 
+.designSectionCardInfo a.darkMode {
+    color: #fff;
+}
+
 /* Blog section styles */
 .blogSection {
     padding: 4.5rem 0rem;

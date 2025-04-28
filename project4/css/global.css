@@ -25,6 +25,7 @@ html {
 body {
     line-height: 1.4;
     color: var(--dark);
+    transition: all 0.4s ease;
 }
 
 img {
@@ -110,6 +111,7 @@ img {
     display: flex;
     list-style: none;
     font-weight: 600;
+    align-items: center;
     letter-spacing: 3px;
     text-transform: uppercase;
     font-family: var(--Roboto);
@@ -527,7 +529,6 @@ img {
 
 .footerSection .footerSectionNavigationMenu {
     display: flex;
-    /* align-items: center; */
     padding: 0rem 1.2rem;
     justify-content: space-between;
 }

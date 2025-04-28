@@ -1,12 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art.Design - Blog</title>
-    <link rel="icon" type="images/png" href="./images/favicon.png">
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Art.Design - Blog</title>
+        <link rel="icon" type="images/png" href="./images/favicon.png">
+
+        <!-- Font links -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- Fontawesome icon link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+        <!-- CSS link -->
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/blog.css">
+        <link rel="stylesheet" href="./css/switch-theme.css">
+    </head>
+    <body>
+        <!-- Blog header section -->
+            <header id="blog" class="headerSection blogHeaderSection">
+
+                <!-- Blog navigation menu -->
+                <nav id="navbar" class="navbar blogHeaderSectionNavbar">
+                    <div class="container">
+                        <div class="navigationMenu blogHeaderSectionNavigationMenu">
+                            <div class="navigationMenuLogo blogHeaderSectionNavigationMenuLogo">
+                                <a href="./index.html"> Art.Design
+                                    <i class="fa-regular fa-registered"></i>
+                                </a>
+                            </div>
+                            <div class="navigationMenuNavbar blogHeaderSectionNavigationMenuNavbar">
+                                <ul class="navbarItems">
+                                    <li class="navbarItem">
+                                        <a href="./index.html">home</a>
+                                    </li>
+                                    <li class="navbarItem">
+                                        <a href="./design.html">design</a>
+                                    </li>
+                                    <li class="navbarItem">
+                                        <a href="#about">about</a>
+                                    </li>
+                                    <li class="navbarItem">
+                                        <a href="#reviews">reviews</a>
+                                    </li>
+                                    <li class="navbarItem">
+                                        <a href="./contact.html">contact</a>
+                                    </li>
+                                    <li class="navbarItem switchMode">
+                                        <label class="switch">
+                                            <input type="checkbox" id="toggleTheme">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- /Blog navigation menu -->
+
+                <!-- Blog sidebar menu -->
+                    <aside id="aside" class="aside">
+                        <button id="toggleSidebar">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <div id="sidebar" class="sidebar">
+                            <div class="sidebarContent">
+                                <div class="sidebarLogo">
+                                    <a href="./index.html">
+                                        Art.Design
+                                        <i class="fa-regular fa-registered"></i>
+                                    </a>
+                                </div>
+                                <div class="sidebarNavigationMenu">
+                                    <ul class="sidebarNavbarItems">
+                                        <li class="sidebarNavbarItem">
+                                            <a href="./index.html">home</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="./design.html">design</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="#design">about</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="#design">reviews</a>
+                                        </li>
+                                        <li class="sidebarNavbarItem">
+                                            <a href="./contact.html">contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sidebarContentFooter">
+                                    <p>
+                                        © 2025 <a href="./index.html">Art.Design</a>. All content is protected by copyright and may not be reproduced without permission.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="backdrop" class="backdrop"></div>
+                    </aside>
+                <!-- /Blog sidebar menu -->
+
+                <!-- Blog section banner -->
+                    <div id="banner" class="banner blogBanner">
+                        <div class="container">
+                            <div class="bannerInfo blogBannerInfo">
+                                <h1 class="bannerTitle blogBannerTitle">
+                                    <span>Art.</span> Design Blogging
+                                </h1>
+                                <p class="bannerText blogBannerText">
+                                    Everything that you want to know about art & design
+                                </p>
+                            </div>
+                            <button id="openSignInModal" class="openSignInModal openModal">Sign in</button>
+                            <button id="openSignUpModal" class="openSignUpModal openModal">Sign up</button>
+                            <div id="signInModal" class="signInModal">
+                                <div class="signInModalContent">
+                                    <div class="signInModalContentTitle">
+                                        <h4>Sign in to Art.Design</h4>
+                                    </div>
+                                    <div class="signInModalContentInput">
+                                        <form action="https://echo.htmlacademy.ru" method="GET">
+                                            <div class="contentInputItem">
+                                                <label for="email">Username or email address</label>
+                                                <input type="text" name="Email" id="email" required>
+                                            </div>
+                                            <div class="contentInputItem">
+                                                <label for="password">
+                                                    <span>Password</span>
+                                                    <a href="#">Forgot password?</a>
+                                                </label>
+                                                <input type="password" name="Password" id="password">
+                                            </div>
+                                            <button id="signIn" class="signIn" disabled>Sign in</button>
+                                        </form>
+                                        <button id="closeSignInModal" class="closeSignInModal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="scrollToTopBtn" class="scrollToTopBtnGradient" title="Go to top">
+                                <i class="fa-solid fa-up-long"></i>
+                            </button>
+                        </div>
+                    </div>
+                <!-- /Blog section banner -->
+
+            </header>
+        <!-- /Blog header section -->
+
+        <!-- Blog page section -->
+            <section class="blogPageSection">
+                <div class="container">
+
+                </div>
+            </section>
+        <!-- /Blog page section -->
+        
+        <!-- JS links -->
+        <script src="./js/switch-mode.js"></script>
+        <script src="./js/sidebar.js"></script>
+        <script src="./js/sign-in.js"></script>
+        <script src="./js/scroll-to-top-btn.js"></script>
+    </body>
 </html>

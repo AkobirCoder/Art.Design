@@ -1,0 +1,51 @@
+/* Switch theme toggle styles */
+body.darkMode {
+    color: #fff;
+    background: var(--extraDark);
+}
+
+.navbarItems .switchMode .switch {
+    width: 50px;
+    height: 24px;
+    font-size: 0.8rem;
+    position: relative;
+    display: inline-block;
+}
+
+.switchMode .switch input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.switch .slider {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    position: absolute;
+    background: #ccc;
+    border-radius: 2rem;
+    transition: all 0.4s ease;
+}
+
+.slider::before {
+    left: 4px;
+    bottom: 4px;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+
+.switch input:checked + .slider {
+    background: #2196f3;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(26px);
+}
