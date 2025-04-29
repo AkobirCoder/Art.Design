@@ -6,8 +6,6 @@ const toggleSidebar = document.getElementById("toggleSidebar");
 const sideBar = document.querySelector(".sidebar");
 const designSectionCardInfos = document.querySelectorAll(".designSectionCardInfo a");
 const blogSection = document.querySelector(".blogSection");
-const blogSectionCards = document.querySelectorAll(".blogSectionCard");
-const blogSectionCardBtns = document.querySelectorAll(".blogCardBtn");
 const authorName = document.querySelector(".authorName");
 const authorProf = document.querySelector(".authorProf");
 const authorCEO = document.querySelector(".authorProf a");
@@ -15,8 +13,6 @@ const reviewImageTitles = document.querySelectorAll(".reviewImageTitle");
 const reviewProfInfos = document.querySelectorAll(".reviewProfInfo p");
 const reviewProfCEOs = document.querySelectorAll(".reviewProfInfo a");
 const reviewProfLogos = document.querySelectorAll(".reviewProfLogo");
-const designPageSectionCards = document.querySelectorAll(".designPageSectionCard");
-const designPageSectionContentControls = document.querySelectorAll(".designPageSectionContentControls button")
 
 let isToggleTurnOn = false;
 
@@ -72,16 +68,11 @@ themeBtn.addEventListener("change", () => {
             reviewProfLogo.style.background = "#767676";
             reviewProfLogo.style.borderRadius = "1rem";
         }
-    }); 
-
-    designPageSectionCards.forEach(card => {
-        if (isToggleTurnOn) {
-            card.style.border = "1px solid red";
-        } else {
-            card.style.border = "none";
-        }
     });
 });
+
+
+const blogSectionCards = document.querySelectorAll(".blogSectionCard");
 
 blogSectionCards.forEach(blogSectionCard => {
     blogSectionCard.addEventListener("mouseenter", () => {
@@ -94,6 +85,9 @@ blogSectionCards.forEach(blogSectionCard => {
         blogSectionCard.style.boxShadow = "none";
     });
 });
+
+
+const blogSectionCardBtns = document.querySelectorAll(".blogCardBtn");
 
 blogSectionCardBtns.forEach(blogSectionCardBtn => {
     blogSectionCardBtn.style.background = "var(--extraDark)"
@@ -108,6 +102,9 @@ blogSectionCardBtns.forEach(blogSectionCardBtn => {
         blogSectionCardBtn.style.transform = "scale(1)";
     });
 });
+
+
+const designPageSectionContentControls = document.querySelectorAll(".designPageSectionContentControls button");
 
 designPageSectionContentControls.forEach(designPageSectionContentControl => {
     designPageSectionContentControl.style.background = "var(--dark)";
