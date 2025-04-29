@@ -218,6 +218,7 @@
 .blogSectionCardInfo .blogCardBtn {
     color: #fff;
     font-size: 1.1rem;
+    display: inline-block;
     text-decoration: none;
     padding: 0.5rem 1.2rem;
     background: var(--dark);

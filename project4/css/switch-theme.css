@@ -1,13 +1,41 @@
+/* Root styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Playfair: "Playfair", serif;
+    --Quicksand: "Quicksand", sans-serif;
+    --Roboto: "Roboto", sans-serif;
+    --dark: #3c393d;
+    --shadow: #6f6f6f;
+    --extraDark: #2b2b2b;
+}
+
 /* Switch theme toggle styles */
 body.darkMode {
     color: #fff;
     background: var(--extraDark);
 }
 
-.navbarItems .switchMode .switch {
-    width: 50px;
-    height: 24px;
+.navbarItems .switchMode {
+    display: flex;
+    color: #fff;
     font-size: 0.8rem;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(103, 103, 103, 0.4);
+}
+
+.navbarItems .switchMode > span {
+    width: 6.7rem;
+    max-width: 6.7rem;
+}
+
+.navbarItems .switchMode .switch {
+    width: 3.3rem;
+    height: 1.7rem;
+    font-size: 0.8rem;
+    margin-left: 1rem;
     position: relative;
     display: inline-block;
 }
@@ -30,12 +58,29 @@ body.darkMode {
     transition: all 0.4s ease;
 }
 
+.switch .slider .sunIcon,
+.switch .slider .moonIcon {
+    top: 5px;
+    left: 7px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    color: var(--extraDark);
+    transition: all 0.4s ease;
+}
+
+.sunIcon.active,
+.moonIcon.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
 .slider::before {
     left: 4px;
     bottom: 4px;
     content: "";
-    width: 1rem;
-    height: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
     background: #fff;
     position: absolute;
     border-radius: 50%;
@@ -43,7 +88,15 @@ body.darkMode {
 }
 
 .switch input:checked + .slider {
-    background: #2196f3;
+    background: var(--extraDark);
+}
+
+.switch input:checked + .slider .sunIcon {
+    transform: translateX(26px);
+}
+
+.switch input:checked + .slider .moonIcon {
+    transform: translateX(26px);
 }
 
 .switch input:checked + .slider::before {
