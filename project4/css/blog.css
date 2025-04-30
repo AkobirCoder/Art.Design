@@ -14,3 +14,146 @@
 .blogHeaderSection .blogBanner {
     padding: 12%;
 }
+
+.blogPageSection {
+    padding: 4.5rem 0rem;
+}
+
+.blogPageSection .blogPageSectionContent {
+    margin: 2rem 0rem;
+}
+
+.blogPageSectionContent .blogPageSectionContentItems {
+    padding: 0rem 1rem;
+    margin-bottom: 4.5rem;
+}
+
+.blogPageSectionContentItems .blogPageSectionContentItem {
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.blogPageSectionContentItem .blogPageSectionContentImages {
+    row-gap: 2rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.blogPageSectionContentImages .blogContentImages {
+    gap: 2rem;
+    height: 720px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.blogContentImages .blogContentImage {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+  
+.blogContentImages .blogContentImage a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.blogContentImage:hover a img {
+    transform: scale(1.2);
+}
+
+.blogContentImages .blogImageOne,
+.blogContentImages .blogImageFour {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.blogContentImages .blogImageTwo,
+.blogContentImages .blogImageFive {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.blogContentImages .blogImageThree,
+.blogContentImages .blogImageSix {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.blogContentImage span {
+    top: 0.5rem;
+    left: 0.5rem;
+    color: #fff;
+    width: 1.6rem;
+    display: flex;
+    height: 1.6rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.blogPageSectionContentItem .blogPageSectionContentInfos {
+    row-gap: 2rem;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.blogContentInfo .infoSource {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.3rem;
+    justify-content: space-between;
+}
+
+.infoSource > span {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    display: flex;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    align-items: center;
+    background: #6f6f6f;
+    justify-content: center;
+}
+.infoSource .infoDate {
+    width: 16%;
+    display: flex;
+    font-size: 0.9rem;
+    justify-content: space-between;
+}
+
+.blogContentInfo .infoTitle {
+    text-indent: 2rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+    text-transform: capitalize;
+    font-family: var(--Playfair);
+}
+
+.blogContentInfo .infoText {
+    opacity: 0.7;
+    text-indent: 2rem;
+    font-size: 0.9rem;
+    text-align: justify;
+    letter-spacing: 0.5px;
+}
+
+.blogPageSectionPagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blogPageSectionPagination a {
+    text-decoration: none;
+}
