@@ -1,0 +1,1 @@
+This website is fully built on HTML CSS. The reason is that the version is an example. That is, the CSS is emphasized. You can see that CSS is mainly used to use the CSS Display-Flex and Grid systems. JS has also been used to increase the functionality again.
