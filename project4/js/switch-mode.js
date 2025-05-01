@@ -4,15 +4,7 @@ const moonIcon = document.querySelector(".moonIcon");
 const themeBtn = document.getElementById("toggleTheme");
 const toggleSidebar = document.getElementById("toggleSidebar");
 const sideBar = document.querySelector(".sidebar");
-const designSectionCardInfos = document.querySelectorAll(".designSectionCardInfo a");
 const blogSection = document.querySelector(".blogSection");
-const authorName = document.querySelector(".authorName");
-const authorProf = document.querySelector(".authorProf");
-const authorCEO = document.querySelector(".authorProf a");
-const reviewImageTitles = document.querySelectorAll(".reviewImageTitle");
-const reviewProfInfos = document.querySelectorAll(".reviewProfInfo p");
-const reviewProfCEOs = document.querySelectorAll(".reviewProfInfo a");
-const reviewProfLogos = document.querySelectorAll(".reviewProfLogo");
 
 let isToggleTurnOn = false;
 
@@ -26,24 +18,41 @@ themeBtn.addEventListener("change", () => {
         moonIcon.classList.add("active");
         toggleSidebar.style.background = "var(--dark)";
         sideBar.style.boxShadow = "2px 0px 5px rgba(130, 130, 130, 0.5)";
-        blogSection.style.background = "var(--dark)";
+        if (blogSection) {
+            blogSection.style.background = "var(--dark)";
+        }
     } else {
         switchMode.innerHTML = "light mode";
         sunIcon.classList.add("active");
         moonIcon.classList.remove("active");
         toggleSidebar.style.background = "var(--extraDark)";
         sideBar.style.boxShadow = "2px 0px 5px rgba(0, 0, 0, 0.5)";
-        blogSection.style.background = "#f9f9f9";
+        if (blogSection) {
+            blogSection.style.background = "#f9f9f9";
+        }
     }
+
+
+    const designSectionCardInfos = document.querySelectorAll(".designSectionCardInfo a");
 
     designSectionCardInfos.forEach(designSectionCardInfo => {
         designSectionCardInfo.classList.toggle("darkMode");
     });
 
+
+    const authorName = document.querySelector(".authorName");
+    const authorProf = document.querySelector(".authorProf");
+    const authorCEO = document.querySelector(".authorProf a");
+
     const authorInfos = [authorName, authorProf, authorCEO];
     authorInfos.forEach(element => {
-        element.style.color = "#fff";
+        if (element) {
+            element.style.color = "#fff";
+        }
     });
+
+
+    const reviewImageTitles = document.querySelectorAll(".reviewImageTitle");
 
     reviewImageTitles.forEach(reviewImageTitle => {
         if (isToggleTurnOn) {
@@ -51,11 +60,17 @@ themeBtn.addEventListener("change", () => {
         }
     });
 
+
+    const reviewProfInfos = document.querySelectorAll(".reviewProfInfo p");
+
     reviewProfInfos.forEach(reviewProfInfo => {
         if (isToggleTurnOn) {
             reviewProfInfo.style.color = "#fff";
         }
     });
+
+
+    const reviewProfCEOs = document.querySelectorAll(".reviewProfInfo a");
 
     reviewProfCEOs.forEach(reviewProfCEO => {
         if (isToggleTurnOn) {
@@ -63,10 +78,22 @@ themeBtn.addEventListener("change", () => {
         }
     });
 
+
+    const reviewProfLogos = document.querySelectorAll(".reviewProfLogo");
+
     reviewProfLogos.forEach(reviewProfLogo => {
         if (isToggleTurnOn) {
             reviewProfLogo.style.background = "#767676";
             reviewProfLogo.style.borderRadius = "1rem";
+        }
+    });
+
+
+    const blogPageLearns = document.querySelectorAll(".infoText a");
+
+    blogPageLearns.forEach(blogPageLearn => {
+        if (isToggleTurnOn) {
+            blogPageLearn.style.color = "White";
         }
     });
 });
@@ -118,3 +145,5 @@ designPageSectionContentControls.forEach(designPageSectionContentControl => {
         designPageSectionContentControl.style.boxShadow = "none";
     });
 });
+
+

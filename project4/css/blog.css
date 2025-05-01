@@ -124,6 +124,7 @@
     background: #6f6f6f;
     justify-content: center;
 }
+
 .infoSource .infoDate {
     width: 16%;
     display: flex;
@@ -148,6 +149,10 @@
     letter-spacing: 0.5px;
 }
 
+.infoText a {
+    margin-left: 1rem;
+}
+
 .blogPageSectionPagination {
     display: flex;
     align-items: center;
@@ -155,5 +160,21 @@
 }
 
 .blogPageSectionPagination a {
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    display: flex;
+    margin: 0rem 1rem;
+    border-radius: 50%;
+    align-items: center;
     text-decoration: none;
+    justify-content: center;
+    transition: all 0.2s ease;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.blogPageSectionPagination a:hover {
+    color: #a8a8a8;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 5px #979797;
 }
